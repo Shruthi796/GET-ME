@@ -1,0 +1,578 @@
+@import url(https://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans
+);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite DE Grund", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+/*=================learn More========*/
+
+.normal a{
+    text-decoration:none;
+
+}
+
+/*.playwrite-de-grund-<uniquifier> {
+  font-family: "Playwrite DE Grund", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}*/
+/* starting header*/
+.company-name{
+    font-size: 70px;
+    background: url(bg1.png);
+    background-clip:text;
+    color:transparent;
+    animation:move 7s infinite;
+}
+@keyframes move{
+    100%{
+        background-position-x: 500px;
+    }
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 5px 15px;
+    position: sticky;
+    Z-INDEX:999;
+    top: 0;
+    left:0;
+}
+.img-com{
+    padding-left: 30px;
+    width:150px;
+    height: 150px;
+
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:rgb(255, 127, 127);  
+}
+#navbar li a.active::after,
+#navbar li a:hover::after
+    {
+    content:"";
+    width:30%;
+    height:2px;
+    background: rgb(6, 165, 85);
+    position: absolute;
+    bottom:-4px;
+    left:20px;
+}
+#Mobile{
+    display: none;
+    align-items: center;
+}
+#close{
+    display: none;
+}
+/* hero page*/
+#hero{
+    background-image: url("opening .jpg");
+    height: calc(100vh -120px);
+    width: 100%;
+    color:#d1d7d2;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 350px 100px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+}
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding:15px 30px;
+    color:#000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;;
+}
+button.normal:hover{
+    background-color: rgb(85, 189, 210);
+    color: #fff;
+    
+}
+
+
+#hero .opening{
+    height: 150px;
+    display:flex;
+    margin: auto;
+
+}
+#hero h4{
+    padding-bottom: 15px;
+}
+#hero h1{
+    font-family: Georgia, 'Times New Roman', serif;    
+    color: rgba(241, 160, 8, 0.959);
+    text-shadow: #222;
+    border: #222;
+}
+.product1 .pro-contaner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap:wrap;
+
+}
+.product1{
+    text-align: center;
+    padding-top: 50px;
+
+}
+.product1 .pro img{
+    width:100%;
+    border-radius: 20px;
+}
+.product1 .pro{
+    width:23%;
+    min-width:250px;
+    padding:10px 12px;
+    border:1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin:15px 0;
+    transition:0.2s ease;
+    position: relative;
+}
+.product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+
+}
+.product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+.product1 .pro .des span{
+    color:#606060;
+    font-size :12px ;
+}
+.product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+.product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight:700;
+    color:#088178;
+}
+.product1 .pro #cart{
+    width: 40px;
+    height: 40px;
+    line-height:40px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: rgb(67, 201, 243);
+    border:1px solid rgb(192, 202, 198);
+    position: absolute;
+    bottom:20px;
+    right:10px;
+}
+
+/* start media*/
+@media (max-width: 799px){
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:0px;
+        right:-300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #navbar.active{
+        right: 0px;
+
+    }
+    #navbar i{
+        margin-bottom: 25px;
+    }
+    #Mobile{
+        display: flex;
+        align-items: center;
+    }
+    #Mobile i{
+      color:#1a1a1a;
+      font-size: 24px;
+      padding-left: 20px;
+    }
+    #close{
+        position: absolute;
+        display: initial;
+        top:30px;
+        left:30px;
+        color:#222;
+        font-size: 24px;
+    }
+    #lg-bag{
+        display: none;
+    }
+    #hero {
+        height:70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+    .product1 .pro-contaner {
+        justify-content:center;
+        margin: 15px;
+       
+    }
+
+}
+/* Shop page */
+#page-header{
+    background-image:url(dress0.jpg);
+    width:100%;
+    height:50vh;
+    background-size: cover;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    flex-direction: column;
+    padding:14px;    
+}
+#page-header h1{
+    color:#ec8484;
+
+}
+#page-header h2{
+    color:#fff;
+}
+
+.shop-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    padding: 30px;
+}
+.section-title{
+    text-align: center;
+    padding: 10px;
+    text-decoration: solid;
+}
+.product-box{
+    position: relative;
+}
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: .4s;
+    background-color: #e6dfdf;
+
+}
+.product-img{
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    margin-bottom: .5rem;
+    border-radius: 20px;
+    
+}
+.product-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+.product-price{
+    font-weight: 500;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    /* background-color: var(--text-color); */
+    background-color:transparent;
+    padding-right: 10px;
+    padding-right: 10px;
+
+}
+.add-cart:hover{
+    color: #088178;
+}
+#pagination {
+    text-align: center;
+
+}
+#pagination a{
+    text-decoration: none;
+    background-color: #088178;
+    padding:10px 15px;
+    color: #fff;
+    font-weight: 600;
+    border-radius:10px;
+    box-shadow: 10px;
+}
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+.section-p1{
+    padding: 30px;
+}
+
+
+
+
+/* ================ RESPONSIVE & BREAKPOINTS ============= */
+@media (max-width: 1080px){
+    .nav{
+        padding: 15px;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    section{
+        padding: 3rem 0 2rem;
+    }
+    .shop{
+        margin-top: 2rem;
+    }
+}
+
+/* For Medium Devices */
+@media (max-width: 400px){
+    .nav{
+        padding: 11px;
+    }
+    .logo{
+        font-size: 1rem;
+    }
+    .cart{
+        width: 320px;
+    }
+}
+
+/* For Small Devices */
+@media (max-width: 360px){
+    .shop{
+        margin-top: 1rem;
+    }
+    .cart{
+        width: 280px;
+    }
+}
+
+
+/* CART INCREMENT */
+#span{
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    border: 1px solid red;
+    background-color: #fd4646;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16.5%;
+}
+
+/* cart-page -start*/
+#cart-header{
+    background-image: url(dres10.jpg);
+    text-align: center;
+}
+
+#cart table{
+    width:100%;
+    border-collapse: collapse;
+    table-layout:fiexd;
+    white-space:nowrap;
+
+}
+#cart table img{
+    width:70px
+}
+#cart table td:nth-child(1){
+    width:100px;
+    text-align: center;
+}
+#cart table td:nth-child(2){
+    width:150px;
+    text-align: center;
+}
+#cart table td:nth-child(3){
+    width:250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width:150px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+    
+}
+#cart table thead{
+    border:1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+#cart table tbody td{
+    font-weight: 700px;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding:18px 0;
+}
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+#cart table tbody td{
+    font-size: 13px;
+
+}
+/* about hero*/
+#about-hero {
+    text-align:center;
+    color:#ec8484;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+}
+
+#sm-banner {
+    background-image: url(logo.png);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+/*
+#sm-banner .banner-box{
+    padding-left: 30px;
+    padding-top: 250px;
+    position: relative;
+    color: #5c58aa;
+}
+
+#sm-banner .banner-box{
+    text-align: left;
+    background-image: url(images-N/dress8.jpg);
+    height:70vh;
+    background-size: cover;
+    background-position: center;
+}*/
+
+
+#sm-banner .banner-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    /*background-image: url(images-N/dress8.jpg);*/
+    width: 500px;
+    height:50vh;
+    background-size: cover;
+    background-position: center;
+}
+#sm-banner  h4{
+    color:rgb(103, 72, 112);
+}
+
+
+#sm-banner .banner-box1{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    /*background-image: url(images-N/dress19.jpg);*/
+    width: 580px;
+    height:50vh;
+    background-size: cover;
+    background-position: center;
+   
+}
+#sm-banner .banner-box2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+   /* background-image: url(images-N/dress16.jpg);*/
+    width: 500px;
+    height:50vh;
+    background-size: cover;
+    background-position: center;
+   
+}
+#sm-banner .banner-box3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+   /* background-image: url(images-N/dress20.jpg);*/
+    width: 580px;
+    height:50vh;
+    background-size: cover;
+    background-position: center;
+   
+}
+/* ================ RESPONSIVE & BREAKPOINTS ============= */
+@media (max-width: 1080px){
+    .about{
+        padding: 11px;
+    }
+    #sm-banner {
+        background-image: url(logo.png);
+        background-size:cover;
+    }
+    #Mobile{
+        display: flex;
+        align-items: center;
+    }
+}
